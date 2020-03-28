@@ -28,11 +28,11 @@ function printEventList() {
     }
 
     //change the text area background color according to the time
-    if (currentHour < 9) {
-        $(".form-control").addClass("bg-success");
-    } else if (currentHour > 17) {
+    $(".form-control").addClass("bg-success");
+    if (currentHour > 17) {
+        $(".form-control").removeClass("bg-success");
         $(".form-control").addClass("bg-secondary");
-    } else {
+    } else if (currentHour > 8 && currentHour < 18) {
         currentHour = currentHour - 9;
         var currentHourTextArea = "[value=inputArea" + currentHour + "]";
         $(currentHourTextArea).removeClass("bg-success");
@@ -46,3 +46,11 @@ function printEventList() {
         }
     }
 }
+
+//reload page when time hit next hour
+setInterval(function () {
+    var currentMinute = moment().minute();
+    if (currentMinute == 0) {
+        location.reload();
+    }
+}, 1000);
