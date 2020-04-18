@@ -9,4 +9,4 @@ On iPhone 5/SE
 <img src="assets/image/screenshotMobile.png" alt="screenshot on mobile" width="450"/>
 
 ## Link
-[Work Day Scheduler](https://terry0532.github.io/Homework_5/)
+[Work Day Scheduler](https://terry0532.github.io/Work-Day-Scheduler/)
